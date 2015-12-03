@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WebViewController.h
 //  safariNG
 //
 //  Created by Michael Moss on 10/21/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface WebViewController : UIViewController
 
 @end
-

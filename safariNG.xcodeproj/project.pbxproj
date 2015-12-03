@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		EF7B88DB1BD8849700F4CD4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88DA1BD8849700F4CD4B /* main.m */; };
 		EF7B88DE1BD8849700F4CD4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88DD1BD8849700F4CD4B /* AppDelegate.m */; };
-		EF7B88E11BD8849700F4CD4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88E01BD8849700F4CD4B /* ViewController.m */; };
 		EF7B88E41BD8849700F4CD4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7B88E21BD8849700F4CD4B /* Main.storyboard */; };
 		EF7B88E61BD8849700F4CD4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7B88E51BD8849700F4CD4B /* Assets.xcassets */; };
 		EF7B88E91BD8849700F4CD4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7B88E71BD8849700F4CD4B /* LaunchScreen.storyboard */; };
 		EF7B88F41BD8849700F4CD4B /* safariNGTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88F31BD8849700F4CD4B /* safariNGTests.m */; };
 		EF7B88FF1BD8849700F4CD4B /* safariNGUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7B88FE1BD8849700F4CD4B /* safariNGUITests.m */; };
+		EF7B890E1BD8854A00F4CD4B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7B890D1BD8854A00F4CD4B /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		EF7B88DA1BD8849700F4CD4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF7B88DC1BD8849700F4CD4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF7B88DD1BD8849700F4CD4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF7B88DF1BD8849700F4CD4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF7B88E01BD8849700F4CD4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EF7B88E31BD8849700F4CD4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF7B88E51BD8849700F4CD4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF7B88E81BD8849700F4CD4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		EF7B88FA1BD8849700F4CD4B /* safariNGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = safariNGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7B88FE1BD8849700F4CD4B /* safariNGUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = safariNGUITests.m; sourceTree = "<group>"; };
 		EF7B89001BD8849700F4CD4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7B890C1BD8854A00F4CD4B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		EF7B890D1BD8854A00F4CD4B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,10 @@
 		EF7B88D81BD8849700F4CD4B /* safariNG */ = {
 			isa = PBXGroup;
 			children = (
+				EF7B890C1BD8854A00F4CD4B /* WebViewController.h */,
+				EF7B890D1BD8854A00F4CD4B /* WebViewController.m */,
 				EF7B88DC1BD8849700F4CD4B /* AppDelegate.h */,
 				EF7B88DD1BD8849700F4CD4B /* AppDelegate.m */,
-				EF7B88DF1BD8849700F4CD4B /* ViewController.h */,
-				EF7B88E01BD8849700F4CD4B /* ViewController.m */,
 				EF7B88E21BD8849700F4CD4B /* Main.storyboard */,
 				EF7B88E51BD8849700F4CD4B /* Assets.xcassets */,
 				EF7B88E71BD8849700F4CD4B /* LaunchScreen.storyboard */,
@@ -270,8 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7B88E11BD8849700F4CD4B /* ViewController.m in Sources */,
 				EF7B88DE1BD8849700F4CD4B /* AppDelegate.m in Sources */,
+				EF7B890E1BD8854A00F4CD4B /* WebViewController.m in Sources */,
 				EF7B88DB1BD8849700F4CD4B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

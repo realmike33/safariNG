@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,146 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsa-do-E18">
+                                <rect key="frame" x="500" y="46" width="80" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Go Forward"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="104" width="80" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="goForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSd-zw-XdW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obI-Jn-hcv">
+                                <rect key="frame" x="443" y="46" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="&lt;"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="311" y="103" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="goBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bSd-Ts-WpZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxD-cS-T36">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Reload"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="349" y="104" width="47" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="reloadPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obR-TR-6r8"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NB4-9K-XqV">
+                                <rect key="frame" x="0.0" y="128" width="600" height="507"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="142" width="400" height="458"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7nh-2g-qHn"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-cW-VER">
+                                <rect key="frame" x="282" y="363" width="37" height="37"/>
+                                <animations/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="182" y="368" width="37" height="37"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNt-Qg-dxz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Stop"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="25" y="104" width="32" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopLoadingView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CeS-AR-fu4"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cay-JV-nLW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="142" width="400" height="458"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="btL-rR-4EI"/>
+                                </connections>
+                            </scrollView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="h0s-HY-jf7">
+                                <rect key="frame" x="197" y="47" width="206" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="148" y="105" width="161" height="30"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YaJ-bK-1Uc"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NB4-9K-XqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="C2a-tI-vVh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NB4-9K-XqV" secondAttribute="bottom" id="EIN-oK-e5a"/>
+                            <constraint firstItem="NB4-9K-XqV" firstAttribute="top" secondItem="rNt-Qg-dxz" secondAttribute="bottom" constant="8" id="Jtv-we-wMb"/>
+                            <constraint firstItem="NB4-9K-XqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="grl-TI-9pc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NB4-9K-XqV" secondAttribute="trailing" constant="-20" id="hwt-JX-njQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NB4-9K-XqV" secondAttribute="trailing" id="nbn-Iy-uUe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NB4-9K-XqV" secondAttribute="bottom" id="rhg-0B-B54"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WxD-cS-T36"/>
+                                <exclude reference="rNt-Qg-dxz"/>
+                                <exclude reference="Cay-JV-nLW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="C2a-tI-vVh"/>
+                                <exclude reference="Jtv-we-wMb"/>
+                                <exclude reference="grl-TI-9pc"/>
+                                <exclude reference="hwt-JX-njQ"/>
+                                <exclude reference="nbn-Iy-uUe"/>
+                                <exclude reference="EIN-oK-e5a"/>
+                                <exclude reference="rhg-0B-B54"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="WxD-cS-T36"/>
+                                <include reference="rNt-Qg-dxz"/>
+                                <include reference="Cay-JV-nLW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="C2a-tI-vVh"/>
+                                <include reference="Jtv-we-wMb"/>
+                                <include reference="grl-TI-9pc"/>
+                                <exclude reference="hwt-JX-njQ"/>
+                                <include reference="nbn-Iy-uUe"/>
+                                <include reference="EIN-oK-e5a"/>
+                                <exclude reference="rhg-0B-B54"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="VOc-cW-VER" id="2Xe-4H-WMs"/>
+                        <outlet property="inputField" destination="h0s-HY-jf7" id="rzf-m6-cUa"/>
+                        <outlet property="webView" destination="NB4-9K-XqV" id="TaZ-Ue-D7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="432" y="339"/>
         </scene>
     </scenes>
 </document>
